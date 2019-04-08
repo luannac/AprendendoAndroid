@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebService</string>
+    <string name="cpf">Cpf</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>
