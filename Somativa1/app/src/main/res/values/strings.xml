@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Somativa</string>
+    <string name="somativa_nome">Gerencia Chaves</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="Validar">Validar</string>
+    <string name="ultima_valiadacao">Ultima Validação</string>
+    <string name="Chave">Chave</string>
+    <string name="codigo">Código</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="validacao">Validação</string>
+</resources>
