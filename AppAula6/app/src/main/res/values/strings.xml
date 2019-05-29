@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Aula6</string>
+    <string name="bMusica">Habilitar Musica</string>
+    <string name="nome">Nome</string>
+    <string name="User">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="btCadastrar">Cadastrar</string>
+    <string name="btLogin">Login</string>
+    <string name="btFavorito">Favorito</string>
+</resources>

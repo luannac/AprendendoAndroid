@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Aula3</string>
+    <string name="newScreen">New Screen</string>
+    <string name="btCamera">Go to Camera</string>
+    <string name="btSite">Go to Site</string>
+    <string name="btNumber">Make a Call</string>
+</resources>

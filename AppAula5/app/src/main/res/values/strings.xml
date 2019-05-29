@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Aula5</string>
+    <string name="btSoma">Soma</string>
+    <string name="btVog">Vogal e Consolante</string>
+    <string name="btImc">IMC</string>
+    <string name="txText">Campo</string>
+    <string name="txPeso">Peso</string>
+    <string name="txAltura">Altura</string>
+    <string name="btCal">Calcular</string>
+    <string name="txinfoImc">Digite o seu peso e altura para o calculo:</string>
+    <string name="txResult">Resultado:</string>
+</resources>

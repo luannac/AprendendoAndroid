@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aula2</string>
+    <string name="buttonAdd">Add</string>
+    <string name="buttonShow">Show</string>
+    <string name="hintText">New Number</string>
+    <string name="textview1">Nada</string>
+    <string name="textview2">Nada</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Aula1</string>
+    <string name="buttonChange">Change</string>
+    <string name="newWord">New Word</string>
+</resources>
