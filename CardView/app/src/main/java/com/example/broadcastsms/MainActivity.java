@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(layout);
 
-        /*
+
         btAgendar = findViewById(R.id.btAgendar);
         campoHora = findViewById(R.id.campoHora);
         campoMinuto = findViewById(R.id.campoMinuto);
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        */
+
 
         if(ContextCompat.checkSelfPermission(this,Manifest.permission.RECEIVE_SMS)!=
                 PackageManager.PERMISSION_GRANTED){

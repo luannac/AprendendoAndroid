@@ -77,7 +77,7 @@ public class BancoDeDados extends SQLiteOpenHelper {// ver documentação para u
 
                     listaPontos.add(coord);
 
-                }while (c.moveToFirst()); //faz isso para todas as linhas encontradas
+                }while (c.moveToNext()); //faz isso para todas as linhas encontradas
             }
             banco.close(); //fecha a conexão
             return  listaPontos; //retorna a lista com todos os pontos ou em branco
