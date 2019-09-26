@@ -3,10 +3,10 @@ package com.luann.formativa;
 public class Chave {
     private int _id;
     private String chave,autenticacao;
-    private double dataHora;
+    private long dataHora;
     private int status;
 
-    public Chave(int _id,String chave,String autenticacao,double data,int status){
+    public Chave(int _id,String chave,String autenticacao,long data,int status){
         this._id = _id;
         this.chave =chave;
         this.autenticacao = autenticacao;
@@ -36,11 +36,11 @@ public class Chave {
         this.autenticacao = autenticacao;
     }
 
-    public double getDatahora() {
+    public long getDatahora() {
         return dataHora;
     }
 
-    public void setDatahora(double datahora) {
+    public void setDatahora(long datahora) {
         this.dataHora = datahora;
     }
 

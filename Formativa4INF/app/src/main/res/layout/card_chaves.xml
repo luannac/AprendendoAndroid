@@ -67,15 +67,19 @@
         app:layout_constraintBottom_toTopOf="@+id/cardChave_campo_autenticacao"
         app:layout_constraintStart_toEndOf="@+id/cardChave_label_data"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <ImageView
         android:id="@+id/cardChaves_imagestatus"
         android:layout_width="20dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:background="@color/colorTrue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cardChaves_campo_data"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:color/transparent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,15 +5,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Constraints;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolderChaves extends RecyclerView.ViewHolder {
     TextView chave,autenticacao,dataHora;
     ImageView status;
-    Constraints constraints;
+    ConstraintLayout constraints;
 
-    public ViewHolderChaves(@NonNull View itemView) {
+    public ViewHolderChaves(View itemView) {
         super(itemView);
         chave = itemView.findViewById(R.id.cardChave_campo_chave);
         autenticacao = itemView.findViewById(R.id.cardChave_campo_autenticacao);

@@ -25,19 +25,19 @@ public class AdapterChaves extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.card_chaves ,parent,false);//Mudar R.layout.activity_main
-        ViewHolderChaves vhChaves = new ViewHolderChaves(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.card_chaves ,parent,false);
+        com.luann.formativa.ViewHolderChaves vhChaves = new com.luann.formativa.ViewHolderChaves(view);
 
         return vhChaves;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ViewHolderChaves vhChaves = (ViewHolderChaves) holder;
+        com.luann.formativa.ViewHolderChaves vhChaves = (com.luann.formativa.ViewHolderChaves) holder;
         vhChaves.chave.setText(chaves.get(position).getChave());
         vhChaves.autenticacao.setText(chaves.get(position).getAutenticacao());
 
-        Date datahora = new Date (String.valueOf(chaves.get (position).getDatahora()));
+        Date datahora = new Date (chaves.get (position).getDatahora());
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM HH:mm:ss");
         vhChaves.dataHora.setText(sdf.format(datahora));
 

@@ -33,10 +33,10 @@ public class BancoDeDados extends SQLiteOpenHelper {
         Cursor cursor = null;
         try{
             SQLiteDatabase db = getWritableDatabase();
-            cursor = db.rawQuery("SELECT chave INTO chaves WHERE chave == "+chave,new String[]{});
+            cursor = db.rawQuery("SELECT chave FROM chaves WHERE chave = ?;",new String[]{chave});
         }catch (Exception e){ Log.d("Banco",e.toString());}
 
-        if(cursor!=null){
+        if(cursor.moveToFirst()){
             return true;
         }
         return false;
@@ -46,11 +46,10 @@ public class BancoDeDados extends SQLiteOpenHelper {
         Cursor cursor = null;
         try{
             SQLiteDatabase db = getWritableDatabase();
-            cursor = db.rawQuery("SELECT status INTO chaves WHERE chave == "+chave,new String[]{});
+            cursor = db.rawQuery("SELECT * FROM chaves WHERE chave = ? AND status=?;",new String[]{chave,"1"});
         }catch (Exception e){ Log.d("Banco",e.toString());}
 
-        cursor.moveToFirst();
-        if(cursor.getInt(0)==1)
+        if(cursor.moveToFirst())
             return true;
         else
             return false;
@@ -62,9 +61,9 @@ public class BancoDeDados extends SQLiteOpenHelper {
             intStatus =1;
         try{
             SQLiteDatabase db = getWritableDatabase();
-            db.execSQL("UPDATE chave " +
-                    "SET status = "+intStatus+" " +
-                    "WHERE chave == "+chave+";");
+            db.rawQuery("UPDATE chaves " +
+                    "SET status = ? " +
+                    "WHERE chave = ?;",new String[]{String.valueOf(intStatus),chave});
         }catch (Exception e){ Log.d("Banco",e.toString());return false;}
         return true;
     }
@@ -74,11 +73,11 @@ public class BancoDeDados extends SQLiteOpenHelper {
         Chave chaveResposta  = null;
         try{
             SQLiteDatabase db = getWritableDatabase();
-            cursor = db.rawQuery("SELECT * INTO chaves WHERE chave == "+chave,new String[]{});
+            cursor = db.rawQuery("SELECT * FROM chaves WHERE chave = ?;",new String[]{chave});
         }catch (Exception e){ Log.d("Banco",e.toString());}
 
         if(cursor.moveToFirst())
-            chaveResposta = new Chave(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getDouble(3),cursor.getInt(4));
+            chaveResposta = new Chave(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getLong(3),cursor.getInt(4));
 
         return chaveResposta;
     }
@@ -90,7 +89,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()){
             do{
-                Chave chave = new Chave(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getDouble(3),cursor.getInt(4));
+                Chave chave = new Chave(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getLong(3),cursor.getInt(4));
                 chaves.add(chave);
             }while (cursor.moveToNext());
         }

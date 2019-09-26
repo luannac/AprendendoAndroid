@@ -30,25 +30,25 @@ public class BroadCastSMS extends BroadcastReceiver {
             conteudoSMS += sms[i].getMessageBody();
             }
         int ind = conteudoSMS.indexOf(':');
-        if(ind != -1){
-            chave = conteudoSMS.substring(ind+1,ind+7);
+        if(ind != -1) {
+            chave = conteudoSMS.substring(ind + 1, ind + 7);
 
-            if(!db.chaveExiste(chave)){
+            if (!db.chaveExiste(chave)) {
                 Toast.makeText(context,
-                        "Chave "+chave+" não existe!",
+                        "Chave " + chave + " não existe!",
                         Toast.LENGTH_LONG).show();
-                }
-            }else{
-                if(db.chaveUtilizada(chave)){
+                new Notificacoes(context).notificaoRecebimento("Chave recebida inválida! não existe!");
+            } else {
+                if (db.chaveUtilizada(chave)) {
                     Toast.makeText(context,
                             "Chave já Utilizada",
                             Toast.LENGTH_LONG).show();
-                }else{
-                    db.atualizachave(chave,true);
+                } else {
+                    db.atualizachave(chave, true);
                     Chave chaveO = db.getChave(chave);
-
-
+                    new Notificacoes(context).notificaoRecebimento("Chave:"+chaveO.getChave()+" Autenticação:"+chaveO.getAutenticacao()+" válida! ");
                 }
             }
+        }
     }
 }
