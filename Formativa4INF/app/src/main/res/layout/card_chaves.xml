@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardChaves_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/colorTrueBackground">
+
+    <TextView
+        android:id="@+id/cardChaves_LabelChaves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/LabelChave"
+        app:layout_constraintBottom_toTopOf="@+id/cardChaves_label_autenticacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:id="@+id/cardChaves_label_autenticacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/LabelAutenticacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cardChave_campo_chave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/cardChaves_label_autenticacao"
+        app:layout_constraintStart_toEndOf="@+id/cardChaves_LabelChaves"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cardChave_campo_autenticacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/cardChaves_label_autenticacao"
+        app:layout_constraintTop_toBottomOf="@+id/cardChave_campo_chave" />
+
+    <TextView
+        android:id="@+id/cardChave_label_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/LabelData"
+        app:layout_constraintBottom_toTopOf="@+id/cardChave_campo_autenticacao"
+        app:layout_constraintStart_toEndOf="@+id/cardChave_campo_chave"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/cardChaves_campo_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/cardChave_campo_autenticacao"
+        app:layout_constraintStart_toEndOf="@+id/cardChave_label_data"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <ImageView
+        android:id="@+id/cardChaves_imagestatus"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:background="@color/colorTrue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/transparent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

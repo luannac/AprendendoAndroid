@@ -42,6 +42,47 @@ public class BancoDeDados extends SQLiteOpenHelper {
         return false;
     }
 
+    public boolean chaveUtilizada(String chave){
+        Cursor cursor = null;
+        try{
+            SQLiteDatabase db = getWritableDatabase();
+            cursor = db.rawQuery("SELECT status INTO chaves WHERE chave == "+chave,new String[]{});
+        }catch (Exception e){ Log.d("Banco",e.toString());}
+
+        cursor.moveToFirst();
+        if(cursor.getInt(0)==1)
+            return true;
+        else
+            return false;
+    }
+
+    public  boolean atualizachave(String chave,boolean status){
+        int intStatus = 0;
+        if(status)
+            intStatus =1;
+        try{
+            SQLiteDatabase db = getWritableDatabase();
+            db.execSQL("UPDATE chave " +
+                    "SET status = "+intStatus+" " +
+                    "WHERE chave == "+chave+";");
+        }catch (Exception e){ Log.d("Banco",e.toString());return false;}
+        return true;
+    }
+
+    public Chave getChave(String chave){
+        Cursor cursor = null;
+        Chave chaveResposta  = null;
+        try{
+            SQLiteDatabase db = getWritableDatabase();
+            cursor = db.rawQuery("SELECT * INTO chaves WHERE chave == "+chave,new String[]{});
+        }catch (Exception e){ Log.d("Banco",e.toString());}
+
+        if(cursor.moveToFirst())
+            chaveResposta = new Chave(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getDouble(3),cursor.getInt(4));
+
+        return chaveResposta;
+    }
+
     public List<Chave> listaChave(){
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM chaves",new String[]{});
