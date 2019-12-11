@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Aprendendo android</string>
+    <string name="title_activity_web_com_sessao_main">WebComSessaoMain</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="web_service_sessao_bt_tela_logar">Fazer Login</string>
+    <string name="web_service_sessao_bt_listar">Lista Usuários</string>
+</resources>
