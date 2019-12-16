@@ -6,4 +6,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="web_service_sessao_bt_tela_logar">Fazer Login</string>
     <string name="web_service_sessao_bt_listar">Lista Usuários</string>
+    <string name="campo_user">Usuario</string>
+    <string name="campo_senha">Senha</string>
+    <string name="bt_login">Login</string>
 </resources>

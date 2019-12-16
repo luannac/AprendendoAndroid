@@ -17,6 +17,6 @@ public class WebServiceComSessao extends AppCompatActivity {
         setContentView(R.layout.web_service_sessao_activity_web_service_com_sessao);
 
         frame = findViewById(R.id.web_service_frame);
-        getSupportFragmentManager().beginTransaction().replace(R.id.web_service_frame,new Web_service_sessao_menu()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.web_service_frame,new Menu(this)).commit();
     }
 }
